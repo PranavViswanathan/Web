@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTwo.scss">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon.png" />
+    <link rel="shortcut icon" href="PranavLogo.png" type="image/x-icon">
+    <title>Pranav Viswanathan</title>
+</head>
+<body>
+    <section class="slideOne">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Pranav Viswanathan</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#cards">My Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
+              </ul>
+            </div>
+          </nav>
+        <div class="innerOne">
+            <h1>Pranav Viswanathan</h1>
+            <br>
+            <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+            <h3>I am
+            <span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ "a Student.", "a Developer", "a Hackathon Enthusiast.", "an Innovator"]'></span>
+            </h3>
+            <br><br><br>
+            <div class="social">
+                <a target="_blank" href="https://www.linkedin.com/in/pranav-viswanathan-7976711b7/"><i class="fa fa-linkedin" style="font-size: 36px; color: white;"></i></a>
+                <a target="_blank" href="https://github.com/PranavViswanathan"><i class="fa fa-github"  style="font-size: 36px; color: white; padding-left: 10px;"></i></a>
+            </div>
+           
+        </div>
+    </section>
+    <section class="slideTwo" id="aboutMe">
+        <div class="innerTwo">
+            <h1>About me</h1>
+        </div>
+        <br>
+        <p>
+            I'm an undergrad student currently pursuing Computer Science with a Specialization in Cyber-Physical systems at VIT. I love studying about IoT and Machine learning.
+I have extensive knowledge in Python, C, C++, Java, HTML5, CSS, Bootstrap, Servlets, JSP's, PLSQL, MySQL, Postgresql, and Oracle DB.
+I have experiance using Tensor flow and OpenCV which i've used for various projects.
+I love participating in Hackathons.
+        </p>
+        
+    </section>
+    <section class="cards" id="cards">
+        <center>
+            <h1 style="color: white">My Projects</h1>
+        </center>
+        <div class="card">
+          <div class="card__image a">
+          </div>
+          <div class="card__content">
+            <div class="card__title">Beach Water Quality</div>
+            <div class="card__text">View my project on beach water quality</div>
+            <a href="https://linktr.ee/Pranav21" class="card__readmore" target="_blank">Go There</a>
+          </div>
+      
+        </div>
+        <div class="card">
+          <div class="card__image b"></div>
+          <div class="card__content">
+            <div class="card__title">Speranza Cieca</div>
+            <div class="card__text">View more on my project Speranza Cieca</div>
+      
+            <a href="https://practicalharware.github.io/Website/" class="card__readmore">Read More</a>
+          </div>
+      
+        </div>
+        <div class="card">
+          <div class="card__image c"></div>
+          <div class="card__content">
+            <div class="card__title">AgriFuturez</div>
+            <div class="card__text">View my project made during the Tetraflip 21' Hackathon</div>
+      
+            <a href="https://devfolio.co/submissions/agrifuturez-f97a" class="card__readmore">Read More</a>
+          </div>
+      
+        </div>
+      </section>
+      <section class="contacts" id="contact">
+        <div class="contact-page">
+            <h2>Contacts</h2>
+            <div class="contact-info">
+              <div class="item">
+                <i class="icon fas fa-home"></i>
+                Chennai, India
+              </div>
+              <div class="item">
+                <i class="icon fas fa-envelope"></i>
+                pranav.viswanathan11@gmail.com
+              </div>
+            </div>
+            <form form action="https://formsubmit.co/pranav.viswanthan11@email.com" method="POST" class="contact-form">
+              <input type="text" class="textb" placeholder="Your Name" name="name">
+              <input type="email" class="textb" placeholder="Your Email" name="email">
+              <textarea placeholder="Your Message" name="message"></textarea>
+              <br>
+              <center><input type="submit" class="btn" value='Send'></center>
+            </form>
+          </div>
+      </section>
+</body>
+<script>
+   var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+</html>
