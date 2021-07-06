@@ -380,3 +380,13 @@ textarea {
   border: 1px solid #e0e0e0;
   position: fixed;
 }
+
+::-moz-selection { 
+  color: black;
+  background: #fee715ff;
+}
+
+::selection {
+  color: black;
+  background: #fee715ff;
+}
